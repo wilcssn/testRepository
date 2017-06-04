@@ -18,12 +18,12 @@ public class DB_Controller extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-       db.execSQL("CREATE TABLE STUDENTS( ID INTEGER PRIMARY KEY AUTOINCREMENT, FIRSTNAME TEXT UNIQUE, LASTNAME TEXT);");
+        db.execSQL("CREATE TABLE STUDENTS( ID INTEGER PRIMARY KEY AUTOINCREMENT, FIRSTNAME TEXT UNIQUE, LASTNAME TEXT);");
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-      db.execSQL("DROP TABLE IF EXISTS STUDENTS;");
+        db.execSQL("DROP TABLE IF EXISTS STUDENTS;");
         onCreate(db);
     }
 
@@ -33,21 +33,19 @@ public class DB_Controller extends SQLiteOpenHelper {
         contentValues.put("LASTNAME", lastname);
         this.getWritableDatabase().insertOrThrow("STUDENTS", "", contentValues);
     }
+
     public void delete_student(String firstname){
         this.getWritableDatabase().delete("STUDENTS", "FIRSTNAME='" +firstname+ "'",null );
     }
+
     public void update_student(String old_firstname, String new_firstname){
         this.getWritableDatabase().execSQL("UPDATE STUDENTS SET FIRSTNAME='"+ new_firstname + "' WHERE FIRSTNAME='"+ old_firstname+"'");
-
     }
 
     public void list_all_students(TextView textView){
         Cursor cursor = this.getReadableDatabase().rawQuery("SELECT * FROM STUDENTS",null);
-
         textView.setText("");
         while (cursor.moveToNext());
         textView.append(cursor.getString(1) +" "+cursor.getString(2));
     }
-
-
 }

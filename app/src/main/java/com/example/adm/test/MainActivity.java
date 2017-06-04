@@ -27,23 +27,17 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
 
         controller = new DB_Controller(this, "",null,1);
-
     }
 
     public void btnClick(View view) {
-
         switch (view.getId()){
             case R.id.btnSave:
                 try {
-
                 }catch (SQLiteException e){
                     Toast.makeText(MainActivity.this, "ALREADY EXISTS", Toast.LENGTH_SHORT).show();
                 }
                 controller.insert_student(firstname.getText().toString(),lastname.getText().toString());
                 EditText x = firstname;
-
-
-
                 break;
 
             case R.id.btnDelete:
@@ -56,22 +50,18 @@ public class MainActivity extends AppCompatActivity {
 
                 final EditText new_firstname = new EditText(this);
                 dialog.setView(new_firstname);
-
                 dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                     controller.update_student(firstname.getText().toString(),new_firstname.getText().toString());
-
+                        controller.update_student(firstname.getText().toString(),new_firstname.getText().toString());
                     }
                 });
-
                 dialog.show();
-
                 break;
+
             case R.id.btnList:
                 controller.list_all_students(textView);
                 break;
-
         }
     }
 }
