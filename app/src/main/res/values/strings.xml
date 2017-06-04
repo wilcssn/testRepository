@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">Test</string>
+    <string name="app_name">Aplicação Teste</string>
     <string name="nome">Nome</string>
     <string name="sobrenome">Sobrenome</string>
     <string name="save">Salvar</string>
     <string name="att">Alterar</string>
     <string name="delete">Excluir</string>
     <string name="read">Listar</string>
+
 </resources>

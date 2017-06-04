@@ -1,22 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.adm.test.MainActivity"><![CDATA[
+    android:orientation="vertical"
+    tools:context="com.example.adm.test.MainActivity">
 
-        android:layout_width="138dp"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp">
-
-
-    ]]>
 
     <EditText
         android:id="@+id/firstname"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:ems="10"
@@ -26,7 +20,7 @@
 
     <EditText
         android:id="@+id/lastname"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
@@ -38,58 +32,56 @@
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/save"
-        android:layout_marginLeft="12dp"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/firstname"
+        android:layout_above="@+id/btnAtt"
         android:layout_alignLeft="@+id/btnAtt"
         android:layout_alignStart="@+id/btnAtt"
-        android:onClick="btnClick"/>
+        android:onClick="btnClick"
+        android:text="@string/save" />
 
     <Button
         android:id="@+id/btnAtt"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
         android:text="@string/att"
-        android:layout_below="@+id/btnSave"
-        android:layout_centerHorizontal="true"
-        android:onClick="btnClick"/>
+        android:onClick="btnClick"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/btnDelete"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/delete"
+        android:onClick="btnClick"
         android:layout_below="@+id/btnAtt"
         android:layout_alignLeft="@+id/btnAtt"
         android:layout_alignStart="@+id/btnAtt"
-        android:layout_marginTop="26dp"
-        android:onClick="btnClick"/>
+        android:layout_marginTop="29dp" />
 
     <Button
         android:id="@+id/btnList"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btnDelete"
-        android:layout_alignRight="@+id/btnDelete"
-        android:layout_alignTop="@+id/btnDelete"
-        android:layout_marginTop="55dp"
         android:text="@string/read"
-        android:onClick="btnClick"/>
+        android:onClick="btnClick"
+        android:layout_below="@+id/btnDelete"
+        android:layout_alignLeft="@+id/btnDelete"
+        android:layout_alignStart="@+id/btnDelete"
+        android:layout_marginTop="19dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btnList"
         android:layout_alignRight="@+id/lastname"
         android:layout_alignEnd="@+id/lastname"
-        android:layout_marginTop="27dp" />
+        android:layout_marginTop="27dp"
+        android:tittle="TESSS"
+        />
 
-</RelativeLayout>
+</LinearLayout>
 
 
