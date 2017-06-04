@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.adm.test.MainActivity"><![CDATA[
+
+        android:layout_width="138dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+
+    ]]>
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nome"
+        />
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Sobrenome"
+        android:layout_below="@+id/firstname"
+        android:layout_alignLeft="@+id/firstname"
+        android:layout_alignStart="@+id/firstname"
+        android:layout_marginTop="18dp" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SALVAR"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/firstname"
+        android:layout_alignLeft="@+id/btnAtt"
+        android:layout_alignStart="@+id/btnAtt"
+        android:onClick="btnClick"/>
+
+    <Button
+        android:id="@+id/btnAtt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="ALTERAR"
+        android:layout_below="@+id/btnSave"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnClick"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="deletar"
+        android:layout_below="@+id/btnAtt"
+        android:layout_alignLeft="@+id/btnAtt"
+        android:layout_alignStart="@+id/btnAtt"
+        android:layout_marginTop="26dp"
+        android:onClick="btnClick"/>
+
+    <Button
+        android:id="@+id/btnList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/btnDelete"
+        android:layout_alignRight="@+id/btnDelete"
+        android:layout_alignTop="@+id/btnDelete"
+        android:layout_marginTop="55dp"
+        android:text="listar"
+        android:onClick="btnClick"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TESTEEEEEE"
+        android:layout_below="@+id/btnList"
+        android:layout_alignRight="@+id/lastname"
+        android:layout_alignEnd="@+id/lastname"
+        android:layout_marginTop="27dp" />
+
+</RelativeLayout>
+
+
