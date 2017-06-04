@@ -21,7 +21,7 @@
         android:layout_marginTop="17dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Nome"
+        android:hint="@string/nome"
         />
 
     <EditText
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Sobrenome"
+        android:hint="@string/sobrenome"
         android:layout_below="@+id/firstname"
         android:layout_alignLeft="@+id/firstname"
         android:layout_alignStart="@+id/firstname"
@@ -40,7 +40,7 @@
         android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SALVAR"
+        android:text="@string/save"
         android:layout_marginLeft="12dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
@@ -54,7 +54,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="13dp"
-        android:text="ALTERAR"
+        android:text="@string/att"
         android:layout_below="@+id/btnSave"
         android:layout_centerHorizontal="true"
         android:onClick="btnClick"/>
@@ -63,7 +63,7 @@
         android:id="@+id/btnDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="deletar"
+        android:text="@string/delete"
         android:layout_below="@+id/btnAtt"
         android:layout_alignLeft="@+id/btnAtt"
         android:layout_alignStart="@+id/btnAtt"
@@ -78,14 +78,13 @@
         android:layout_alignRight="@+id/btnDelete"
         android:layout_alignTop="@+id/btnDelete"
         android:layout_marginTop="55dp"
-        android:text="listar"
+        android:text="@string/read"
         android:onClick="btnClick"/>
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TESTEEEEEE"
         android:layout_below="@+id/btnList"
         android:layout_alignRight="@+id/lastname"
         android:layout_alignEnd="@+id/lastname"
